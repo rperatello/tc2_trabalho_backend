@@ -72,8 +72,60 @@ async function alteraUsuario(usuario) {
     return `Dados alterados com sucesso!`
 }
 
+//contato
+async function listaTodosContatos(user_id) {
+    console.log("Listando todos os contatos do usuário com id: " + user_id);
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [user_id]);
+    if (resultado.length == 0) {return "Não existe usuário com o ID informado!"}
+    const [resultado2] = await conexaoAtiva.query("SELECT * FROM contato WHERE user_id=?;", [user_id]);
+    return resultado2;
+}
 
+async function selecionaContato(id) {
+    console.log(`Selecionado o contato com id: ${id}`);
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM contato WHERE id=?;", [id]);
+    if (resultado.length == 0) {return "Não existe contato com o ID informado!"}
+    return resultado[0];
+}
+
+async function insereContato(contato) {
+    // console.log("Inserindo contato " +  JSON.stringify(contato));
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [contato.user_id]);
+    if (resultado.length == 0) {return "Não existe usuário com o ID informado!"}
+    const sql = "INSERT INTO contato(nome, email, telefone, endereco, user_id) VALUES (?,?,?,?,?);";
+    const parametros = [contato.nome, contato.email, contato.telefone, contato.endereco, contato.user_id];
+    const [response] = await conexaoAtiva.query(sql, parametros);
+    console.log(`Contato inserido com ID: ${response.insertId}.`)
+    return `Contato inserido com sucesso!`
+}
+
+async function excluiContato(id) {
+    console.log(`Apagando o contato com id:${id}`);
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM contato WHERE id=?;", [id]);
+    if (resultado.length == 0) {return "Não existe contato com o ID informado!"}
+    const [response] = await conexaoAtiva.query("DELETE FROM contato WHERE id=?", [id]);
+    return `Contato excluído com sucesso!`
+}
+
+async function alteraContato(contato) {
+    // console.log("Alterando contato: " + JSON.stringify(contato));
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM contato WHERE id=?;", [contato.id]);
+    if (resultado.length == 0) {return "Não existe contato com o ID informado!"}
+    const [resultado2] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [contato.user_id]);
+    // console.log('resultado select user compromisso :>> ', resultado2);
+    if (resultado2.length == 0) { return "Não existe usuário com o ID informado!" } 
+    const sql = "UPDATE contato SET nome = ?, email = ?, telefone = ?, endereco = ?, user_id = ? WHERE id = ?;";
+    const parametros = [contato.nome, contato.email, contato.telefone, contato.endereco, contato.user_id, contato.id];
+    const [response] = await conexaoAtiva.query(sql, parametros);
+    return `Dados alterados com sucesso!`
+}
 
 module.exports = { login,
-    listaTodosUsuarios, selecionaUsuario, insereUsuario, excluiUsuario, alteraUsuario
+    listaTodosUsuarios, selecionaUsuario, insereUsuario, excluiUsuario, alteraUsuario,
+    listaTodosContatos, selecionaContato, insereContato, excluiContato, alteraContato
 }
