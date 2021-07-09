@@ -19,7 +19,7 @@ async function login(usuario) {
     const conexaoAtiva = await conecta();
     const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE login = ?;", [usuario.login]);
     // if (resultado.length == 0) { return 400 }
-    // if (resultado[0].senha != usuario.senha) { return "Senha informada não confere!"}    
+    // if (resultado[0].senha != usuario.senha) { return "Senha informada não confere!"}
     // return response = {status: "conectado", admin: resultado[0].admin == 1 ? true : false  };
     return resultado[0];
 }
@@ -62,8 +62,8 @@ async function excluiUsuario(id) {
 }
 
 async function alteraUsuario(usuario) {
-    // console.log("Alterando usuário: " + JSON.stringify(usuario));    
-    const conexaoAtiva = await conecta();    
+    // console.log("Alterando usuário: " + JSON.stringify(usuario));
+    const conexaoAtiva = await conecta();
     const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [usuario.id]);
     if (resultado.length == 0) {return "Não existe usuário com o ID informado!"}
     const sql = "UPDATE usuario SET nome = ?, senha = ?, admin = ? WHERE id = ?;";
@@ -118,14 +118,68 @@ async function alteraContato(contato) {
     if (resultado.length == 0) {return "Não existe contato com o ID informado!"}
     const [resultado2] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [contato.user_id]);
     // console.log('resultado select user compromisso :>> ', resultado2);
-    if (resultado2.length == 0) { return "Não existe usuário com o ID informado!" } 
+    if (resultado2.length == 0) { return "Não existe usuário com o ID informado!" }
     const sql = "UPDATE contato SET nome = ?, email = ?, telefone = ?, endereco = ?, user_id = ? WHERE id = ?;";
     const parametros = [contato.nome, contato.email, contato.telefone, contato.endereco, contato.user_id, contato.id];
     const [response] = await conexaoAtiva.query(sql, parametros);
     return `Dados alterados com sucesso!`
 }
 
+//compromisso
+async function listaTodosCompromissos(user_id) {
+    console.log("Listando todos os compromissos do usuário com id: " + user_id);
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [user_id]);
+    if (resultado.length == 0) { return "Não existe usuário com o ID informado!" }
+    const [resultado2] = await conexaoAtiva.query("SELECT * FROM compromisso WHERE user_id=?;", [user_id]);
+    return resultado2;
+}
+
+async function selecionaCompromisso(id) {
+    console.log(`Selecionado o compromisso com id: ${id}`);
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM compromisso WHERE id=?;", [id]);
+    if (resultado.length == 0) { return "Não existe compromisso com o ID informado!" }
+    return resultado[0];
+}
+
+async function insereCompromisso(compromisso) {
+    // console.log("Inserindo compromisso: " + JSON.stringify(compromisso));
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [compromisso.user_id]);
+    if (resultado.length == 0) {return "Não existe usuário com o ID informado!"}
+    const sql = "INSERT INTO compromisso(data, obs, participantes, endereco, status, user_id) VALUES (?,?,?,?,?,?);";
+    const parametros = [compromisso.data, compromisso.obs, compromisso.participantes, compromisso.endereco, compromisso.status, compromisso.user_id];
+    const [response] = await conexaoAtiva.query(sql, parametros);
+    console.log(`Compromisso inserido com ID: ${response.insertId}.`)
+    return `Compromisso inserido com sucesso!`
+}
+
+async function excluiCompromisso(id) {
+    console.log(`Apagando o compromisso com id:${id}`);
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM compromisso WHERE id=?;", [id]);
+    if (resultado.length == 0) { return "Não existe compromisso com o ID informado!" }
+    const [response] = await conexaoAtiva.query("DELETE FROM compromisso WHERE id=?", [id]);
+    return `Compromisso excluído com sucesso!`
+}
+
+async function alteraCompromisso(compromisso) {
+    // console.log("Alterando compromisso: " + JSON.stringify(compromisso));
+    const conexaoAtiva = await conecta();
+    const [resultado] = await conexaoAtiva.query("SELECT * FROM compromisso WHERE id=?;", [compromisso.id]);
+    if (resultado.length == 0) { return "Não existe compromisso com o ID informado!" }
+    const [resultado2] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [compromisso.user_id]);
+    // console.log('resultado select user compromisso :>> ', resultado2);
+    if (resultado2.length == 0) { return "Não existe usuário com o ID informado!" }
+    const sql = "UPDATE compromisso SET data = ?, obs = ?, participantes = ?, endereco = ?,  status = ?, user_id = ? WHERE id = ?;";
+    const parametros = [compromisso.data, compromisso.obs, compromisso.participantes, compromisso.endereco, compromisso.status, compromisso.user_id, compromisso.id];
+    const [response] = await conexaoAtiva.query(sql, parametros);
+    return "Dados alterados com sucesso"
+}
+
 module.exports = { login,
     listaTodosUsuarios, selecionaUsuario, insereUsuario, excluiUsuario, alteraUsuario,
-    listaTodosContatos, selecionaContato, insereContato, excluiContato, alteraContato
+    listaTodosContatos, selecionaContato, insereContato, excluiContato, alteraContato,
+    listaTodosCompromissos, selecionaCompromisso, insereCompromisso, excluiCompromisso, alteraCompromisso,
 }
