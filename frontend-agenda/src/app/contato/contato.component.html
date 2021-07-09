@@ -1,1 +1,23 @@
-<p>contato works!</p>
+<div>
+  <H1>Contatos</H1>
+  <div class="">
+    <h3 class="" *ngIf="contactList.length > 0">CONTATOS CADASTRADOS</h3>
+    <h3 class="" *ngIf="contactList.length == 0">NENHUM CONTATOS CADASTRADO</h3>
+    <table class="tableConfig">
+      <tr class="headerLine">
+        <th class="tableCol1">NOME</th>
+        <th class="tableCol2">E-MAIL</th>
+        <th class="tableCol3">TELEFONE</th>
+        <th class="tableCol3">ENDEREÇO</th>
+      </tr>
+      <tr class="" *ngFor="let contact of contactList" (click)='Select(contact)'>
+        <td class="tableCol1">{{contact.nome}}</td>
+        <td class="tableCol2">{{contact.email}}</td>
+        <td class="tableCol3">{{contact.telefone}}</td>
+        <td class="tableCol3">{{contact.endereco}}</td>
+      </tr>
+    </table>
+    <br/>
+    <button><a routerLink="/cadastrarContato">Cadastrar Contato</a></button>
+  </div>
+</div>
