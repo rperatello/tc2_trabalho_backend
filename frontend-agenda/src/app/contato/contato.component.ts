@@ -14,9 +14,9 @@ export class ContatoComponent implements OnInit {
   contactList: Contact[] = [];
 
   loadContacts(): void {
-    this.contactService.getContacts(userId).subscribe( res => {
+    /* this.contactService.getContacts(userId).subscribe( res => {
       this.contactList = res;
-    });
+    }); */
   }
 
   selectContact(contact: Contact): void{

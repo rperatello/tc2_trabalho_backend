@@ -1,22 +1,22 @@
 <div class=container>
   <div class="login-logo">
     <div class="login-box-body">
-      <form action="">
+      <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
         <div>
           <div class="control">
             <label class="label" for="">Login</label>
-            <input class="input" type="text" placeholder="Login">
+            <input formControlName="login" class="input" type="text" placeholder="Login">
           </div>
         </div>
         <div>
           <label class="label" for="">Senha</label>
           <div class="control">
-            <input class="input" type="password" placeholder="Senha">
+            <input formControlName="senha" class="input" type="password" placeholder="Senha">
           </div>
         </div>
         <div class="buttons">
           <button class="button is-dark" routerLink="userRegistration">Cadastre-se</button>
-          <button class="button is-link">Login</button>
+          <button class="button is-link" (click)="login()">Login</button>
         </div>
       </form>
     </div>
