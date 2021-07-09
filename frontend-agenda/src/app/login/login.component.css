@@ -1,0 +1,20 @@
+.login-box-body
+{
+  margin: 9.375rem 21.875rem;
+  padding: 1.875rem;
+  background: #cccccc;
+  border-radius: 0.625rem;
+}
+
+.control .input {
+  margin-bottom: 1.25rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content:space-around;
+}
+
+.is-link {
+  margin-left: 0.625rem;
+}
