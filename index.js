@@ -1,6 +1,8 @@
 var express = require('express');
+require('dotenv/config');
 var app = express();
 const consign = require('consign')
+var port = process.env.PORT || 8080
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -13,6 +15,6 @@ consign()
 
 /*LISTEN DO EXPRESS*/
 
-app.listen(8080, function () {
-    console.log("Rodando na porta 8080");
+app.listen(port, function () {
+    console.log("Rodando na porta " + port);
 });

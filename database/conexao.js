@@ -2,13 +2,7 @@ const { response } = require("express");
 
 async function conecta() {
     const banco = require("mysql2/promise");
-    const con = await banco.createConnection({
-        host: "localhost",
-        port: 3306,
-        user: "root",
-        password: "pentabr0610",
-        database: "tc2_backend"
-    });
+    const con = await banco.createConnection(process.env.CLEARDB_DATABASE_URL);
     console.log("Banco de dados conectado!!");
     return con;
 }
