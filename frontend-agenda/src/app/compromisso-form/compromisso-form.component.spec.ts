@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComprimissoFormComponent } from './comprimisso-form.component';
+import { CompromissoFormComponent } from './compromisso-form.component';
 
-describe('ComprimissoFormComponent', () => {
-  let component: ComprimissoFormComponent;
-  let fixture: ComponentFixture<ComprimissoFormComponent>;
+describe('CompromissoFormComponent', () => {
+  let component: CompromissoFormComponent;
+  let fixture: ComponentFixture<CompromissoFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComprimissoFormComponent ]
+      declarations: [ CompromissoFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComprimissoFormComponent);
+    fixture = TestBed.createComponent(CompromissoFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

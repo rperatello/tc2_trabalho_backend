@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CompromissoComponent } from './compromisso/compromisso.component';
-import { ComprimissoFormComponent } from './comprimisso-form/comprimisso-form.component';
+import { CompromissoFormComponent } from './compromisso-form/compromisso-form.component';
 import { ContatoFormComponent } from './contato-form/contato-form.component';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { ContatoFormComponent } from './contato-form/contato-form.component';
     CadastroComponent,
     ContatoComponent,
     CompromissoComponent,
-    ComprimissoFormComponent,
+    CompromissoFormComponent,
     ContatoFormComponent
   ],
   imports: [
