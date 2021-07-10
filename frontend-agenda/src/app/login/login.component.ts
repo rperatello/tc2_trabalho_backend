@@ -1,7 +1,7 @@
 import { UsuarioService } from './../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { LoginService } from '../login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,12 +12,17 @@ export class LoginComponent implements OnInit {
   userLoginForm : FormGroup;
 
   login() : void{
-    this.onSubmit();
+    this.loginService.login(this.userLoginForm.value.login, this.userLoginForm.value.senha).subscribe(
+      (res) => {
+        alert('Logado com o usuário ' + res.body.nome)
+        // location.assign('/');
+      },
+      (error) => {
+        alert(error.error.msg)
+      })
   }
 
   onSubmit(): void{
-    //Precisa criar a lógica de login e venv com o id do usuário;
-    console.log(this.userLoginForm.value);
   }
 
   initForm(): void{
@@ -27,7 +32,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  constructor(private userService: UsuarioService) { }
+  constructor(private userService: UsuarioService,
+    private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.initForm();

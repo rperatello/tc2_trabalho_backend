@@ -10,7 +10,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { CompromissoComponent } from './compromisso/compromisso.component';
 import { CompromissoFormComponent } from './compromisso-form/compromisso-form.component';
 import { ContatoFormComponent } from './contato-form/contato-form.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,8 @@ import { ContatoFormComponent } from './contato-form/contato-form.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
