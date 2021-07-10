@@ -12,11 +12,11 @@ export class ContatoService {
   baseURL = 'http://localhost:8080';
 
   getContacts(userId): Observable<Contact[]>{
-    return this.http.get<Contact[]>(this.baseURL + '/meusCompromissos/'  + userId);
+    return this.http.get<Contact[]>(this.baseURL + '/meusContatos/'  + userId);
   }
 
   getContact(id: string): Observable<Contact>{
-    return this.http.get<Contact>(this.baseURL + '/selecionarCompromisso/' + id);
+    return this.http.get<Contact>(this.baseURL + '/selecionarContato/' + id);
   }
 
   addContact(contact: {id: number, nome: string, email: string, telefone: string, endereco: string, user_id: number}): Observable<any>{
@@ -38,11 +38,11 @@ export class ContatoService {
     body = body.set('telefone', contact.telefone);
     body = body.set('endereco', contact.endereco);
     body = body.set('user_id', String(contact.user_id));
-    return this.http.put(this.baseURL + '/selecionarCompromisso/' + id, body, {observe: 'response'});
+    return this.http.put(this.baseURL + '/selecionarContato/' + id, body, {observe: 'response'});
   }
 
   deleteContact(id: string): Observable<any>{
-    return this.http.delete(this.baseURL + '/selecionarCompromisso/' + id, {observe: 'response'});
+    return this.http.delete(this.baseURL + '/selecionarContato/' + id, {observe: 'response'});
   }
 
   constructor(private http: HttpClient) { }

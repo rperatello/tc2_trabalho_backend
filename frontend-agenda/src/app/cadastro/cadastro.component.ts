@@ -20,12 +20,35 @@ export class CadastroComponent implements OnInit {
       erros.push("Senhas não conferem");
     }
     //Precisa criar a lógica de cadastro do usuário;
-    erros.length > 0 ? alert(erros) : this.userService.addUser(this.userRegisterForm.value);
-    // Isso pode ajudar
-    /* this.userService.addUser(this.userRegisterForm.value).subscribe(res => {
-      res.ok ? alert('Usuário Cadastrado com Sucesso.') : alert('Falha ao Acessar Banco de Dados.');
-      location.assign('');
-    }); */
+    erros.length > 0 ? alert(erros) : this.userService.addUser(this.userRegisterForm.value).subscribe(
+      (res) => {
+        console.log('res :>> ', JSON.stringify(res));
+          alert(res.data)
+        location.assign('/');
+      },
+      (error) => {
+        if(error.status == 200){
+          console.log('res error:>> ', JSON.stringify(error));
+          if(error.ok)
+            alert(error.message)
+          else
+            alert(error.error.text)
+          location.assign('/');
+        }
+        console.log('error :>> ', error);
+        if(error.status != 200){
+          if(typeof(error.error) == 'string'){
+            console.log('error text :>> ', error.error);
+            alert(error.error)
+          }
+          else
+            error.error.forEach(x => {
+              console.log('error list :>> ', x.msg);
+              alert(x.msg)
+            })
+            this.initForm();
+        }
+      })
   }
 
   initForm(): void {

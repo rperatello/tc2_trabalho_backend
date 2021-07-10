@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.userLoginForm.value.login, this.userLoginForm.value.senha).subscribe(
       (res) => {
         alert('Logado com o usuário ' + res.body.nome)
-        // location.assign('/');
+        //console.log(res.body)
+        sessionStorage.setItem('usuarioId', res.body.id);
+        location.assign('/contatos');
       },
       (error) => {
         alert(error.error.msg)

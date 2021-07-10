@@ -1,1 +1,23 @@
-<p>compromisso works!</p>
+<div class="container">
+  <H1>COMPROMISSOS</H1>
+  <div class="">
+    <h3 class="" *ngIf="appointmentList.length == 0">NENHUM COMPROMISSOS CADASTRADO</h3>
+    <div *ngIf="appointmentList.length > 0">
+      <h3 class="">COMPROMISSOS CADASTRADOS</h3>
+      <table class="tableConfig">
+        <tr class="headerLine">
+          <th class="tableCol1">DATA</th>
+          <th class="tableCol2">DESCRIÇÃO</th>
+        </tr>
+        <tr class="" *ngFor="let appointment of appointmentList" (click)='Select(contact)'>
+          <td class="tableCol1">{{appointment.data}}</td>
+          <td class="tableCol2">{{appointment.obs}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <br/>
+    <button class="button is-link" routerLink="/cadastrarContato">Cadastrar Compromisso</button>
+    <button class="button is-dark" routerLink="/contatos">Ver Contatos</button>
+  </div>
+</div>
