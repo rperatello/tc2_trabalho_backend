@@ -1,6 +1,7 @@
 
 const { body, validationResult } = require("express-validator");
 const { read } = require("fs");
+var md5 = require('md5');
 const banco = require("../database/conexao")
 
 module.exports = app => {
@@ -33,7 +34,7 @@ module.exports = app => {
                 const resultado = await banco.insereUsuario({
                     nome: req.body.nome,
                     login: req.body.login,
-                    senha: req.body.senha,
+                    senha: md5(req.body.senha),
                     admin: req.body.admin,
                 });
                 if (resultado == "Já existe um usuário com o login informado!"){
@@ -67,7 +68,7 @@ module.exports = app => {
                     const resultado = await banco.alteraUsuario({
                         id: req.body.id,
                         nome: req.body.nome,
-                        senha: req.body.senha,
+                        senha: md5(req.body.senha),
                         admin: req.body.admin,
                     });
                     if (resultado == "Não existe usuário com o ID informado!"){

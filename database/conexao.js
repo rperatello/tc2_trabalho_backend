@@ -12,8 +12,8 @@ async function login(usuario) {
     console.log("Verificando login");
     const conexaoAtiva = await conecta();
     const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE login = ?;", [usuario.login]);
-    // if (resultado.length == 0) { return 400 }
-    // if (resultado[0].senha != usuario.senha) { return "Senha informada não confere!"}
+    if (resultado.length == 0) { return 400 }
+    if (resultado[0].senha != usuario.senha) { return 409}
     // return response = {status: "conectado", admin: resultado[0].admin == 1 ? true : false  };
     return resultado[0];
 }
@@ -22,15 +22,17 @@ async function login(usuario) {
 async function listaTodosUsuarios() {
     console.log("Listando todos usuários");
     const conexaoAtiva = await conecta();
-    const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario");
-    return resultado;
+    var [resultado] = await conexaoAtiva.query("SELECT * FROM usuario");
+    resultado.forEach(x => delete x.senha);
+    return resultado
 }
 
 async function selecionaUsuario(id) {
     // console.log(`Selecionado o usuário com id: ${id}`);
     const conexaoAtiva = await conecta();
-    const [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [id]);
+    var [resultado] = await conexaoAtiva.query("SELECT * FROM usuario WHERE id=?;", [id]);
     if (resultado.length == 0) {return "Não existe usuário com o ID informado!"}
+    resultado.forEach(x => delete x.senha);
     return resultado[0];
 }
 

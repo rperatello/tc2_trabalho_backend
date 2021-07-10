@@ -1,5 +1,6 @@
 const { authSecret } = require("../.env")
 const jwt = require('jwt-simple')
+var md5 = require('md5');
 // const bcrypt = require('bcrypt-node-js')
 
 const banco = require("../database/conexao");
@@ -12,12 +13,13 @@ module.exports = app => {
         } else {
             const resultado = await banco.login({
                 login: req.body.login,
-                senha: req.body.senha,
+                senha: md5(req.body.senha),
             });
             // console.log("resultado: ", resultado)
-            if (!resultado) { return res.status(400).send("Usuário não cadastrado!") }
+            if (!resultado || resultado == 400) { return res.status(400).send("Usuário não cadastrado!") }
+            if (resultado == 409) { return res.status(400).send("Senha não confere!") }
             // const isMath = bcrypt.compareSync(req.body.senha, resultado.senha)
-            const isMath = req.body.senha == resultado.senha ? true : false
+            const isMath = md5(req.body.senha) == resultado.senha ? true : false
             if (!isMath) { return res.status(401).send("Acesso negado!") }
             
             const now = Math.floor(Date.now() / 1000)
