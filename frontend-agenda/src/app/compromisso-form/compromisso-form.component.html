@@ -1,1 +1,51 @@
-<p>compromisso-form works!</p>
+<app-menu></app-menu>
+  <div class="container">
+    <h1 class="title" >Cadastrar Compromisso</h1>
+    <form class="field" [formGroup]="compromissoForm" (ngSubmit)="onSubmit()">
+      <div class="details">
+        <div>
+          <label class="label" for="">Data</label>
+          <div class="control">
+            <input formControlName="nome" class="input" type="date">
+          </div>
+        </div>
+
+        <div>
+          <label class="label" for="">Participantes</label>
+          <div class="control">
+            <input formControlName="email" class="input" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="">Endereço</label>
+        <div class="control">
+          <input formControlName="telefone" class="input" type="text">
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="">Observações</label>
+        <div class="control">
+          <input formControlName="endereco" class="textarea" type="text">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="button is-link" (click)="novoCompromisso()">Cadastrar</button>
+        <button class="button is-dark" routerLink="/compromissos">Voltar</button>
+      </div>
+
+      <!-- <div class="buttons" *ngIf="router.url == '/cadastrarCompromisso'">
+        <button class="button is-link" (click)="novoCompromisso()">Cadastrar</button>
+        <button class="button is-dark" routerLink="/compromissos">Voltar</button>
+      </div> -->
+
+      <!-- <div class="buttons" *ngIf="router.url !== '/cadastrarContato'">
+        <button (click)="updateCar()">Alterar Registro</button>
+        <button (click)="deleteCar()">Deletar Registro</button>
+        <button><a routerLink="">Voltar</a></button>
+      </div> -->
+    </form>
+  </div>

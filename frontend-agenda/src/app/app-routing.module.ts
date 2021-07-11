@@ -1,3 +1,4 @@
+import { CompromissoFormComponent } from './compromisso-form/compromisso-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'contatos', component: ContatoComponent},
   { path: 'cadastrarContato', component: ContatoFormComponent},
   { path: 'compromissos', component: CompromissoComponent},
-  // { path: 'cadastrarContato', component: CadastrarContatoComponent},
+  { path: 'cadastrarCompromisso', component: CompromissoFormComponent},
 ];
 
 @NgModule({

@@ -11,7 +11,7 @@
           <th class="tableCol3">TELEFONE</th>
           <th class="tableCol3">ENDEREÇO</th>
         </tr>
-        <tr class="" *ngFor="let contact of contactList" (click)='Select(contact)'>
+        <tr class="contatoLine" *ngFor="let contact of contactList" (click)='Select(contact)'>
           <td class="tableCol1">{{contact.nome}}</td>
           <td class="tableCol2">{{contact.email}}</td>
           <td class="tableCol3">{{contact.telefone}}</td>

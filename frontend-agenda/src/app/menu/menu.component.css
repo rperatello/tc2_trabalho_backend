@@ -2,6 +2,9 @@
 .topnav {
   background-color: #333;
   overflow: hidden;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 5px 12px 0px #333;
+  box-shadow: 0px 5px 12px 0px #333;
 }
 
 .topnav a {
@@ -21,4 +24,10 @@
 .topnav a.active {
   background-color: #485fc7;
   color: white;
+}
+
+.topnav a.danger {
+  background-color: #dc3545;
+  color: white;
+  float: right;
 }

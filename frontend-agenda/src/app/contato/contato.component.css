@@ -4,3 +4,7 @@ table {
   border-spacing: 15px;
   border-collapse: separate;
 }
+
+.contatoLine:hover{
+  cursor: pointer;
+}

@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  logout(): void{
+    sessionStorage.clear();
+    alert('Usuário deslogado com sucesso!')
+  }
+
   constructor() { }
 
   ngOnInit(): void {
