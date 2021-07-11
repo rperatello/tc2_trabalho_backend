@@ -28,6 +28,9 @@ export class CompromissoComponent implements OnInit {
   constructor(private appointmentService: CompromissoService) { }
 
   ngOnInit(): void {
+    if (!this.usuarioToken || !this.usuarioId){
+      location.assign('');
+    }
     this.loadAppointments();
   }
 

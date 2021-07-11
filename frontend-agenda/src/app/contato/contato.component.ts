@@ -33,7 +33,9 @@ export class ContatoComponent implements OnInit {
   constructor(private contactService: ContatoService, private userService: UsuarioService) { }
 
   ngOnInit(): void {
-    console.log(this.usuarioId);
+    if (!this.usuarioToken || !this.usuarioId){
+      location.assign('');
+    }
     this.loadContacts();
   }
 
