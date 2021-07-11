@@ -10,6 +10,9 @@ import { LoginService } from '../login.service';
 export class LoginComponent implements OnInit {
 
   userLoginForm : FormGroup;
+  usuarioId = sessionStorage.getItem('usuarioId');
+  usuarioNome = sessionStorage.getItem('usuarioNome');
+  usuarioToken = sessionStorage.getItem('usuarioToken');
 
   login() : void{
     this.loginService.login(this.userLoginForm.value.login, this.userLoginForm.value.senha).subscribe(
@@ -40,6 +43,9 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService) { }
 
   ngOnInit(): void {
+    if (this.usuarioToken || this.usuarioId){
+      location.assign('/contatos');
+    }
     this.initForm();
   }
 
