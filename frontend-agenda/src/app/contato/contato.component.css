@@ -1,1 +1,6 @@
 .button.is-dark{margin-left: 10px;}
+
+table {
+  border-spacing: 15px;
+  border-collapse: separate;
+}

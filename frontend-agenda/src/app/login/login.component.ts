@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
         //console.log(res.body)
         sessionStorage.setItem('usuarioId', res.body.id);
         sessionStorage.setItem('usuarioNome', res.body.nome);
+        sessionStorage.setItem('usuarioToken', res.body.token);
         location.assign('/contatos');
       },
       (error) => {

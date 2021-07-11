@@ -18,6 +18,7 @@ export class ContatoComponent implements OnInit {
 
   usuarioId = sessionStorage.getItem('usuarioId');
   usuarioNome = sessionStorage.getItem('usuarioNome');
+  usuarioToken = sessionStorage.getItem('usuarioToken');
 
   loadContacts(): void {
     this.contactService.getContacts(this.usuarioId).subscribe( res => {

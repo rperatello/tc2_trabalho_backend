@@ -13,7 +13,10 @@ export class ContatoService {
   baseURL = environment.baseUrl
 
   getContacts(userId): Observable<Contact[]>{
-    return this.http.get<Contact[]>(this.baseURL + '/meusContatos/'  + userId);
+    return this.http.get<Contact[]>(this.baseURL + '/meusContatos/'  + userId, {
+      headers: {
+          "Authorization": `Bearer ${sessionStorage.getItem('usuarioToken')}`
+      }})
   }
 
   getContact(id: string): Observable<Contact>{
