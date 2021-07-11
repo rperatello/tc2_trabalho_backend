@@ -12,6 +12,7 @@ import { CompromissoFormComponent } from './compromisso-form/compromisso-form.co
 import { ContatoFormComponent } from './contato-form/contato-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { MenuComponent } from './menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     ContatoComponent,
     CompromissoComponent,
     CompromissoFormComponent,
-    ContatoFormComponent
+    ContatoFormComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

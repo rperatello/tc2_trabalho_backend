@@ -1,9 +1,9 @@
+<app-menu></app-menu>
 <div class="container">
-  <H1>COMPROMISSOS DE {{usuarioNome}}</H1>
+  <h1 class="title">Compromissos de {{usuarioNome}}</h1>
   <div class="">
     <h3 class="" *ngIf="appointmentList.length == 0">NENHUM COMPROMISSOS CADASTRADO</h3>
     <div *ngIf="appointmentList.length > 0">
-      <h3 class="">COMPROMISSOS CADASTRADOS</h3>
       <table class="tableConfig">
         <tr class="headerLine">
           <th class="tableCol1">DATA</th>
@@ -18,6 +18,5 @@
 
     <br/>
     <button class="button is-link" routerLink="/cadastrarContato">Cadastrar Compromisso</button>
-    <button class="button is-dark" routerLink="/contatos">Ver Contatos</button>
   </div>
 </div>

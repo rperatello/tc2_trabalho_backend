@@ -1,9 +1,9 @@
+<app-menu></app-menu>
 <div class="container">
   <h1 class="title">Contatos de {{usuarioNome}} </h1>
   <div class="">
     <h3 class="" *ngIf="contactList.length == 0">NENHUM CONTATO CADASTRADO</h3>
     <div *ngIf="contactList.length > 0">
-      <h3 class="">CONTATOS CADASTRADOS</h3>
       <table class="tableConfig">
         <tr class="headerLine">
           <th class="tableCol1">NOME</th>
@@ -21,6 +21,5 @@
     </div>
     <br/>
     <button class="button is-link" routerLink="/cadastrarContato">Cadastrar Contato</button>
-    <button class="button is-dark" routerLink="/compromissos">Ver Compromissos</button>
   </div>
 </div>
