@@ -1,1 +1,43 @@
-<p>contato-form works!</p>
+  <div class="container">
+    <h1 class="title" >Cadastrar Contato</h1>
+    <form class="field" [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label class="label" for="">Nome:</label>
+        <div class="control">
+          <input formControlName="nome" class="input" type="text">
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="">E-Mail</label>
+        <div class="control">
+          <input formControlName="email" class="input" type="text">
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="">Telefone</label>
+        <div class="control">
+          <input formControlName="telefone" class="input" type="text">
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="">Endreço</label>
+        <div class="control">
+          <input formControlName="endereco" class="input" type="text">
+        </div>
+      </div>
+
+      <div class="buttons" *ngIf="router.url == '/cadastrarContato'">
+        <button class="button is-link" (click)="novoContato()">Cadastrar</button>
+        <button class="button is-dark" routerLink="/contatos">Voltar</button>
+      </div>
+
+      <!-- <div class="buttons" *ngIf="router.url !== '/cadastrarContato'">
+        <button (click)="updateCar()">Alterar Registro</button>
+        <button (click)="deleteCar()">Deletar Registro</button>
+        <button><a routerLink="">Voltar</a></button>
+      </div> -->
+    </form>
+  </div>

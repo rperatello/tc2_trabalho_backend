@@ -15,7 +15,7 @@ export class ContatoService {
   getContacts(userId): Observable<Contact[]>{
     return this.http.get<Contact[]>(this.baseURL + '/meusContatos/'  + userId, {
       headers: {
-          "Authorization": `Bearer ${sessionStorage.getItem('usuarioToken')}`
+          'Authorization': `Bearer ${sessionStorage.getItem('usuarioToken')}`
       }})
   }
 
@@ -31,7 +31,7 @@ export class ContatoService {
     body = body.set('telefone', contact.telefone);
     body = body.set('endereco', contact.endereco);
     body = body.set('user_id', String(contact.user_id));
-    return this.http.post(this.baseURL, body, {observe: 'response'});
+    return this.http.post(this.baseURL + '/adicionarContato', body, {observe: 'response'});
   }
 
   updateContact(contact: {id: number, nome: string, email: string, telefone: string, endereco: string, user_id: number}, id: string): Observable<any>{
