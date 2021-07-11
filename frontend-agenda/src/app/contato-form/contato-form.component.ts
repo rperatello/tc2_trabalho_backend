@@ -20,8 +20,7 @@ export class ContatoFormComponent implements OnInit {
   novoContato(): void{
     if (this.contatoForm.valid){
       this.contatoService.addContact(this.contatoForm.value).subscribe( res => {
-        res.ok ? alert ('Veículo Cadastrado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');
-        alert('Contato cadastrado com sucesso!');
+        res.ok ? alert ('Contato cadastrado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');
         location.assign('/contatos');
       });
     } else {
@@ -29,9 +28,7 @@ export class ContatoFormComponent implements OnInit {
     }
   }
 
-
   onSubmit(): void{
-
   }
 
   initForm(): void{
