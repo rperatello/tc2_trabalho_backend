@@ -43,7 +43,7 @@ export class ContatoService {
     });
   }
 
-  updateContact(contact: { id: number, nome: string, email: string, telefone: string, endereco: string, user_id: number }, id: string): Observable<any> {
+  updateContact(contact: { id: number, nome: string, email: string, telefone: string, endereco: string, user_id: number }): Observable<any> {
     let body = new HttpParams();
     body = body.set('id', String(contact.id));
     body = body.set('nome', contact.nome);
@@ -51,7 +51,7 @@ export class ContatoService {
     body = body.set('telefone', contact.telefone);
     body = body.set('endereco', contact.endereco);
     body = body.set('user_id', this.usuarioId);
-    return this.http.put(this.baseURL + '/selecionarContato/' + id, body, {
+    return this.http.put(this.baseURL + '/alterarContato', body, {
       observe: 'response',
       responseType: 'text',
       headers: {

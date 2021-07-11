@@ -8,3 +8,5 @@ table {
 .contatoLine:hover{
   cursor: pointer;
 }
+button {
+  margin-left :5px }

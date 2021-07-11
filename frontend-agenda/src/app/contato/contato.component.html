@@ -6,20 +6,23 @@
     <div *ngIf="contactList.length > 0">
       <table class="tableConfig">
         <tr class="headerLine">
-          <th class="tableCol1">NOME</th>
-          <th class="tableCol2">E-MAIL</th>
-          <th class="tableCol3">TELEFONE</th>
-          <th class="tableCol3">ENDEREÇO</th>
+          <th class="tableCol1">ID</th>
+          <th class="tableCol2">NOME</th>
+          <th class="tableCol3">E-MAIL</th>
+          <th class="tableCol4">TELEFONE</th>
+          <th class="tableCol5">ENDEREÇO</th>
         </tr>
         <tr class="contatoLine" *ngFor="let contact of contactList" (click)='Select(contact)'>
-          <td class="tableCol1">{{contact.nome}}</td>
-          <td class="tableCol2">{{contact.email}}</td>
-          <td class="tableCol3">{{contact.telefone}}</td>
-          <td class="tableCol3">{{contact.endereco}}</td>
+          <td class="tableCol1">{{contact.id}}</td>
+          <td class="tableCol2">{{contact.nome}}</td>
+          <td class="tableCol3">{{contact.email}}</td>
+          <td class="tableCol4">{{contact.telefone}}</td>
+          <td class="tableCol5">{{contact.endereco}}</td>
         </tr>
       </table>
     </div>
     <br/>
     <button class="button is-link" routerLink="/cadastrarContato">Cadastrar Contato</button>
+    <button class="button is-link" routerLink="/alterarContato">Alterar Contato</button>
   </div>
 </div>

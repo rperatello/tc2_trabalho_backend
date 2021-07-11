@@ -28,11 +28,24 @@ export class ContatoFormComponent implements OnInit {
     }
   }
 
+  alterarContato(): void{
+    console.log(this.contatoForm)
+    if (this.contatoForm.valid){
+      this.contatoService.updateContact(this.contatoForm.value).subscribe( res => {
+        res.ok ? alert ('Contato alterado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');
+        location.assign('/contatos');
+      });
+    } else {
+      alert('Falha ao alterar o contato')
+    }
+  }
+
   onSubmit(): void{
   }
 
   initForm(): void{
     this.contatoForm = new FormGroup ({
+      id: new FormControl(null),
       nome: new FormControl(null, Validators.required),
       email: new FormControl (null, Validators.required),
       telefone: new FormControl (null, Validators.required),

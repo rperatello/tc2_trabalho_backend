@@ -1,7 +1,16 @@
 <app-menu></app-menu>
-  <div class="container">
-    <h1 class="title" >Cadastrar Contato</h1>
+<div class="container">
+    <h1 class="title" *ngIf="router.url == '/cadastrarContato'">Cadastrar Contato</h1>
+    <h1 class="title" *ngIf="router.url == '/alterarContato'">Alterar Contato</h1>
     <form class="field" [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
+
+      <div *ngIf="router.url == '/alterarContato'">
+        <label class="label" for="">ID:</label>
+        <div class="control">
+          <input formControlName="id" class="input" type="text">
+        </div>
+      </div>
+
       <div>
         <label class="label" for="">Nome:</label>
         <div class="control">
@@ -35,10 +44,10 @@
         <button class="button is-dark" routerLink="/contatos">Voltar</button>
       </div>
 
-      <!-- <div class="buttons" *ngIf="router.url !== '/cadastrarContato'">
-        <button (click)="updateCar()">Alterar Registro</button>
-        <button (click)="deleteCar()">Deletar Registro</button>
-        <button><a routerLink="">Voltar</a></button>
-      </div> -->
+      <div class="buttons" *ngIf="router.url == '/alterarContato'">
+        <button class="button is-link" (click)="alterarContato()">Alterar</button>
+        <button class="button is-dark" routerLink="/contatos">Voltar</button>
+      </div>
+
     </form>
   </div>

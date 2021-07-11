@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'userRegistration', component: CadastroComponent},
   { path: 'contatos', component: ContatoComponent},
   { path: 'cadastrarContato', component: ContatoFormComponent},
+  { path: 'alterarContato', component: ContatoFormComponent},
   { path: 'compromissos', component: CompromissoComponent},
   { path: 'cadastrarCompromisso', component: CompromissoFormComponent},
 ];
