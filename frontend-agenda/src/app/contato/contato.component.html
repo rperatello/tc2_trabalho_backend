@@ -12,12 +12,13 @@
           <th class="tableCol4">TELEFONE</th>
           <th class="tableCol5">ENDEREÇO</th>
         </tr>
-        <tr class="contatoLine" *ngFor="let contact of contactList" (click)='Select(contact)'>
+        <tr class="contatoLine" *ngFor="let contact of contactList">
           <td class="tableCol1">{{contact.id}}</td>
           <td class="tableCol2">{{contact.nome}}</td>
           <td class="tableCol3">{{contact.email}}</td>
           <td class="tableCol4">{{contact.telefone}}</td>
           <td class="tableCol5">{{contact.endereco}}</td>
+          <button class="button bt-excluir" (click)="deleteContact(contact.id)">Excluir</button>
         </tr>
       </table>
     </div>

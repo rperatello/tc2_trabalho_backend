@@ -61,13 +61,13 @@ export class ContatoService {
   }
 
   deleteContact(id: string): Observable<any> {
-    return this.http.delete(this.baseURL + '/selecionarContato/' + id, {
-      observe: 'response',
+    return this.http.request('delete', this.baseURL + '/excluirContato/', {
+      body: { id: id },
       responseType: 'text',
       headers: {
         "Authorization": `Bearer ${sessionStorage.getItem('usuarioToken')}`
       }
-    });
+    })
   }
 
   constructor(private http: HttpClient) { }

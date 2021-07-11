@@ -26,6 +26,13 @@ export class ContatoComponent implements OnInit {
     });
   }
 
+  deleteContact(id: number): void {
+    this.contactService.deleteContact(String(id)).subscribe( res => {
+      alert('Contato deletado com sucesso!')
+      location.assign('/contatos');
+    });
+  }
+
   selectContact(contact: Contact): void{
     location.assign('/selectedContact/' + contact.id);
   }
