@@ -15,6 +15,10 @@ app.get('/contatos', (req, res) => {
     res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/contatos/index.html`))
   })
 
+  app.get('/compromissos', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/compromissos/index.html`))
+  })
+
 consign()
     .include('./config/passport.js')
     .then('./config/middlewares.js')

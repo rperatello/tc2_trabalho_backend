@@ -11,10 +11,14 @@ export class CompromissoComponent implements OnInit {
 
   appointmentList: Appointment[] = [];
 
-  loadAppointment(): void {
-    /* this.contactService.getContacts(userId).subscribe( res => {
-      this.contactList = res;
-    }); */
+  usuarioId = sessionStorage.getItem('usuarioId');
+  usuarioNome = sessionStorage.getItem('usuarioNome');
+  usuarioToken = sessionStorage.getItem('usuarioToken');
+
+  loadAppointments(): void {
+    this.appointmentService.getAppointments(this.usuarioId).subscribe( res => {
+      this.appointmentList = res;
+    });
   }
 
   selectContact(appointment: Appointment): void{
@@ -24,7 +28,7 @@ export class CompromissoComponent implements OnInit {
   constructor(private appointmentService: CompromissoService) { }
 
   ngOnInit(): void {
-    this.loadAppointment();
+    this.loadAppointments();
   }
 
 }
