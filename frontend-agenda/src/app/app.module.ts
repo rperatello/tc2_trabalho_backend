@@ -11,6 +11,7 @@ import { CompromissoComponent } from './compromisso/compromisso.component';
 import { CompromissoFormComponent } from './compromisso-form/compromisso-form.component';
 import { ContatoFormComponent } from './contato-form/contato-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

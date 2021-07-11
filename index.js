@@ -8,7 +8,11 @@ var port = process.env.PORT || 8080
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/frontend-agenda/dist/frontend-agenda`))
 app.get('/', (req, res) => {
-    res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/frontend-agenda/index.html`))
+    res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/index.html`))
+  })
+
+app.get('/contatos', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/contatos/index.html`))
   })
 
 consign()

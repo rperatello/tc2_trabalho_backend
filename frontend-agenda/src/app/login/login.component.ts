@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
         alert('Logado com o usuário ' + res.body.nome)
         //console.log(res.body)
         sessionStorage.setItem('usuarioId', res.body.id);
+        sessionStorage.setItem('usuarioNome', res.body.nome);
         location.assign('/contatos');
       },
       (error) => {

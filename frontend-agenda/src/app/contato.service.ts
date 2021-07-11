@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Contact } from './models/Contact';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContatoService {
 
-  baseURL = 'http://localhost:8080';
+  baseURL = environment.baseUrl
 
   getContacts(userId): Observable<Contact[]>{
     return this.http.get<Contact[]>(this.baseURL + '/meusContatos/'  + userId);

@@ -17,6 +17,7 @@ export class ContatoComponent implements OnInit {
   contactList: Contact[] = [];
 
   usuarioId = sessionStorage.getItem('usuarioId');
+  usuarioNome = sessionStorage.getItem('usuarioNome');
 
   loadContacts(): void {
     this.contactService.getContacts(this.usuarioId).subscribe( res => {

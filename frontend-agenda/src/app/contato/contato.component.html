@@ -1,6 +1,6 @@
 <div class="container">
   <!-- <H1>Contatos de {{ usuarioLogado.nome }}</H1> -->
-  <H1>Contatos de --- Aqui vai o nome do usuário --- </H1>
+  <H1>Contatos de {{usuarioNome}} </H1>
   <div class="">
     <h3 class="" *ngIf="contactList.length == 0">NENHUM CONTATO CADASTRADO</h3>
     <div *ngIf="contactList.length > 0">
