@@ -27,6 +27,14 @@ app.get('/alterarContato', (req, res) => {
   res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/cadastrarContato/index.html`))
 })
 
+app.get('/cadastrarCompromisso', (req, res) => {
+  res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/cadastrarContato/index.html`))
+})
+
+app.get('/alterarCompromisso', (req, res) => {
+  res.sendFile(path.join(`${__dirname}/frontend-agenda/dist/static/cadastrarContato/index.html`))
+})
+
 consign()
     .include('./config/passport.js')
     .then('./config/middlewares.js')

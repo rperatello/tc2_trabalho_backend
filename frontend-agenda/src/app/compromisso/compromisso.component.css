@@ -4,3 +4,6 @@ table {
   border-spacing: 15px;
   border-collapse: separate;
 }
+
+button {
+  margin-left :5px }

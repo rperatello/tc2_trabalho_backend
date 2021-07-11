@@ -29,7 +29,6 @@ export class ContatoFormComponent implements OnInit {
   }
 
   alterarContato(): void{
-    console.log(this.contatoForm)
     if (this.contatoForm.valid){
       this.contatoService.updateContact(this.contatoForm.value).subscribe( res => {
         res.ok ? alert ('Contato alterado com Sucesso.') : alert ('Falha ao Acessar Banco de Dados.');

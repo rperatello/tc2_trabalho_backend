@@ -1,1 +1,1 @@
-[{"route":"/"},{"route":"/userRegistration"},{"route":"/contatos"},{"route":"/cadastrarContato"},{"route":"/compromissos"}]
+[{"route":"/"},{"route":"/userRegistration"},{"route":"/contatos"},{"route":"/cadastrarContato"},{"route":"/alterarContato"},{"route":"/compromissos"},{"route":"/cadastrarCompromisso"},{"route":"/alterarCompromisso"}]

@@ -6,17 +6,26 @@
     <div *ngIf="appointmentList.length > 0">
       <table class="tableConfig">
         <tr class="headerLine">
-          <th class="tableCol1">DATA</th>
-          <th class="tableCol2">DESCRIÇÃO</th>
+          <th class="tableCol1">ID</th>
+          <th class="tableCol2">DATA</th>
+          <th class="tableCol3">DESCRIÇÃO</th>
+          <th class="tableCol4">PARTICIPANTES</th>
+          <th class="tableCol5">STATUS</th>
+          <th class="tableCol6">ENDEREÇO</th>
         </tr>
         <tr class="" *ngFor="let appointment of appointmentList" (click)='Select(contact)'>
-          <td class="tableCol1">{{appointment.data}}</td>
-          <td class="tableCol2">{{appointment.obs}}</td>
+          <td class="tableCol1">{{appointment.id}}</td>
+          <td class="tableCol2">{{appointment.data}}</td>
+          <td class="tableCol3">{{appointment.obs}}</td>
+          <td class="tableCol4">{{appointment.participantes}}</td>
+          <td class="tableCol5">{{appointment.status}}</td>
+          <td class="tableCol6">{{appointment.endereco}}</td>
         </tr>
       </table>
     </div>
 
     <br/>
     <button class="button is-link" routerLink="/cadastrarCompromisso">Cadastrar Compromisso</button>
+    <button class="button is-link" routerLink="/alterarCompromisso">Alterar Compromisso</button>
   </div>
 </div>
