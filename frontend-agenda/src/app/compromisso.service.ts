@@ -21,6 +21,16 @@ export class CompromissoService {
       }})
   }
 
+  deleteAppointment(id: string): Observable<any> {
+    return this.http.request('delete', this.baseURL + '/excluirCompromisso/', {
+      body: { id: id },
+      responseType: 'text',
+      headers: {
+        "Authorization": `Bearer ${sessionStorage.getItem('usuarioToken')}`
+      }
+    })
+  }
+
   addAppointments(appointment: { id: number, data: string, endereco: string, obs: string, participantes: string, status: string, user_id: number, hora: string }): Observable<any>{
     let body = new HttpParams();
     let newData = appointment.data.split('-')
@@ -57,6 +67,7 @@ export class CompromissoService {
       }
     });
   }
+
 
   constructor(private http: HttpClient) { }
 }

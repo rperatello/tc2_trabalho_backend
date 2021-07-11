@@ -13,13 +13,14 @@
           <th class="tableCol5">STATUS</th>
           <th class="tableCol6">ENDEREÇO</th>
         </tr>
-        <tr class="" *ngFor="let appointment of appointmentList" (click)='Select(contact)'>
+        <tr class="" *ngFor="let appointment of appointmentList">
           <td class="tableCol1">{{appointment.id}}</td>
           <td class="tableCol2">{{appointment.data}}</td>
           <td class="tableCol3">{{appointment.obs}}</td>
           <td class="tableCol4">{{appointment.participantes}}</td>
           <td class="tableCol5">{{appointment.status}}</td>
           <td class="tableCol6">{{appointment.endereco}}</td>
+          <button class="button bt-excluir" (click)="deletaCompromisso(appointment.id)">Excluir</button>
         </tr>
       </table>
     </div>

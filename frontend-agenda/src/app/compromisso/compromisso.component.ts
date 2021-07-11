@@ -21,6 +21,13 @@ export class CompromissoComponent implements OnInit {
     });
   }
 
+  deletaCompromisso(id: string): void {
+    this.appointmentService.deleteAppointment(id).subscribe( res => {
+      alert('Compromisso deletado com sucesso!')
+      location.assign('/compromissos');
+    });
+  }
+
   selectContact(appointment: Appointment): void{
     location.assign('/selectedAppointment/' + appointment.id);
   }
