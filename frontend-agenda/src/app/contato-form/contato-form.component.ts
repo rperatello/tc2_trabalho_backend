@@ -12,10 +12,10 @@ import { Contact } from '../models/Contact';
 export class ContatoFormComponent implements OnInit {
 
   contatoForm: FormGroup;
-
   selectedId: string;
-
   selecionaContatoById: Contact;
+  usuarioId = sessionStorage.getItem('usuarioId');
+  usuarioToken = sessionStorage.getItem('usuarioToken');
 
   novoContato(): void{
     if (this.contatoForm.valid){
@@ -43,6 +43,9 @@ export class ContatoFormComponent implements OnInit {
   constructor(private contatoService: ContatoService, public router: Router) { }
 
   ngOnInit(): void {
+    if (!this.usuarioToken || !this.usuarioId){
+      location.assign('');
+    }
     this.initForm();
   }
 
