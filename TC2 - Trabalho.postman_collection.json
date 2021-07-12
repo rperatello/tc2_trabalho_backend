@@ -1,0 +1,2461 @@
+{
+	"info": {
+		"_postman_id": "9a0d9bfe-d8de-4607-b59b-9135acc44e9d",
+		"name": "TC2 - Trabalho",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "meusCompromissos/14",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/meusCompromissos/14",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"meusCompromissos",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "meusCompromissos/14",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/meusCompromissos/14",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"meusCompromissos",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "357"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"165-J3z4yovw5R8ld0XgVzpsTPDjxHw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 04:45:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 6,\n        \"data\": \"2021-08-10T11:00:00.000Z\",\n        \"obs\": \"Evento\",\n        \"participantes\": \"Nome1, Nome2, Nome3\",\n        \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\n        \"status\": \"Em andamento\",\n        \"user_id\": 14\n    },\n    {\n        \"id\": 7,\n        \"data\": \"2021-08-20T12:00:00.000Z\",\n        \"obs\": \"Evento 2\",\n        \"participantes\": \"Nome1, Nome2, Nome3\",\n        \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\n        \"status\": \"Em andamento\",\n        \"user_id\": 14\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "meusCompromissos/1 (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/meusCompromissos/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"meusCompromissos",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "meusCompromissos/1 (exemplo de erro)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/meusCompromissos/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"meusCompromissos",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"28-VQQyVtmDzB7ZVXCvgHawv0M0p+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 22:31:41 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe usuário com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "selecionarCompromisso/6",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/selecionarCompromisso/6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"selecionarCompromisso",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionarCompromisso/6",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/selecionarCompromisso/6",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"selecionarCompromisso",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "176"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b0-7dpF6YakFIqvdSMPFvFafjogI1Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 04:46:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"data\": \"2021-08-10T11:00:00.000Z\",\n    \"obs\": \"Evento\",\n    \"participantes\": \"Nome1, Nome2, Nome3\",\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\n    \"status\": \"Em andamento\",\n    \"user_id\": 14\n}"
+						}
+					]
+				},
+				{
+					"name": "selecionarCompromisso/1 (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/selecionarCompromisso/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"selecionarCompromisso",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionarCompromisso/1 (exemplo de erro)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/selecionarCompromisso/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"selecionarCompromisso",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2b-IhN0SNfMfGPiJASPMgYfhuBN2Qs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 22:32:51 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe compromisso com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "meusContatos/14",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/meusContatos/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"meusContatos",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "meusContatos/14",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/meusContatos/14",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"meusContatos",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-XANEwJpsuTEXipCwqoERWL6ynfM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 04:49:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 18,\n        \"nome\": \"Nome do Contato\",\n        \"email\": \"contato@email.com\",\n        \"telefone\": \"11 1111-1111\",\n        \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\n        \"user_id\": 14\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "meusContatos/1 (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/meusContatos/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"meusContatos",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "meusContatos/1 (exemplo de erro)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/meusContatos/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"meusContatos",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"28-VQQyVtmDzB7ZVXCvgHawv0M0p+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 22:34:27 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe usuário com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "selecionarContato/18",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/selecionarContato/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"selecionarContato",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionarContato/18",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/selecionarContato/18",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"selecionarContato",
+										"18"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-6+KbBpJvb1anVUE8JANTgeX0twg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 04:50:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 18,\n    \"nome\": \"Nome do Contato\",\n    \"email\": \"contato@email.com\",\n    \"telefone\": \"11 1111-1111\",\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\n    \"user_id\": 14\n}"
+						}
+					]
+				},
+				{
+					"name": "selecionarContato/1 (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/selecionarContato/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"selecionarContato",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionarContato/1 (exemplo de erro)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/selecionarContato/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"selecionarContato",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"27-J+VvdaURUlruiU7AlveUwq00i7M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 23:20:03 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe contato com o ID informado!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// const token = pm.response.json().token;\r",
+									"// console.log(token);\r",
+									"\r",
+									"if(responseCode.code == 200){\r",
+									"    var res = JSON.parse(responseBody);\r",
+									"    postman.setEnvironmentVariable('token', res.token)\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"login\",\r\n    \"senha\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"login\",\r\n    \"senha\": \"password\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f6-emNcKgOspuadhprU+SCZgJ2Sl1c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jun 2021 02:58:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Name\",\n    \"email\": 1,\n    \"iat\": 1624503530,\n    \"exp\": 1624510730,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibm9tZSI6Ik5hbWUiLCJlbWFpbCI6MSwiaWF0IjoxNjI0NTAzNTMwLCJleHAiOjE2MjQ1MTA3MzB9.wHQfy5NDk35nyC-luAc4wftO3axel5jbAcg-6uXUuRo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login (exemplo com erro)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// const token = pm.response.json().token;\r",
+									"// console.log(token);\r",
+									"\r",
+									"if(responseCode.code == 200){\r",
+									"    var res = JSON.parse(responseBody);\r",
+									"    postman.setEnvironmentVariable('token', res.token)\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"login\",\r\n    \"senha\": \"password2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login (exemplo com erro)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"login\",\r\n    \"senha\": \"password2\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"13-Pp9HSV0LRFu+PuHdhj9M/YfK9Gk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 23:37:40 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Senha não confere!"
+						}
+					]
+				},
+				{
+					"name": "validatetoken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/validatetoken",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"validatetoken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "validatetoken",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/validatetoken",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"validatetoken"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e-819kYGCLHhGfR1Qg5DpR3+Iu6lU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 01:41:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Token válido!"
+						}
+					]
+				},
+				{
+					"name": "validatetoken (exemplo com erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzUsIm5vbWUiOiJSb2dlciIsImVtYWlsIjoxLCJpYXQiOjE2MjYwMzg0MzEsImV4cCI6MTYyNjA0NTYzMX0.2FOgDOoWKRob5ODxXt6HkZRMBxTXgxTUVe7pU1KAjbc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/validatetoken",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"validatetoken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "validatetoken (exemplo com erro)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/validatetoken",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"validatetoken"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "15"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f-TXPbVT/V3o0etxqtwXy0aiPxAts\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 23:39:38 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Token expirado!"
+						}
+					]
+				},
+				{
+					"name": "adicionarContato",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Nome do Contato\",\r\n    \"email\": \"contato@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/adicionarContato",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"adicionarContato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adicionarContato",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Nome do Contato\",\r\n    \"email\": \"contato@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/adicionarContato",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"adicionarContato"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-fO75LNhAgLQJ1fVSxdggpRTbAtU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 02:51:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Contato inserido com sucesso!"
+						}
+					]
+				},
+				{
+					"name": "adicionarContato (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Nome do Contato\",\r\n    \"email\": \"contato@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/adicionarContato",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"adicionarContato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adicionarContato (exemplo de erro)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Nome do Contato\",\r\n    \"email\": \"contato@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/adicionarContato",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"adicionarContato"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"28-VQQyVtmDzB7ZVXCvgHawv0M0p+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:36:43 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe usuário com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "adicionarCompromisso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2021/08/10 08:00:00\",\r\n    \"obs\": \"Evento\",\r\n    \"participantes\": \"Nome1, Nome2, Nome3\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"status\": \"Em andamento\",\r\n    \"user_id\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/adicionarCompromisso",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"adicionarCompromisso"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adicionarCompromisso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": \"2021/08/10 08:00:00\",\r\n    \"obs\": \"Evento\",\r\n    \"participantes\": \"Nome1, Nome2, Nome3\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"status\": \"Em andamento\",\r\n    \"user_id\": 14\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/adicionarCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"adicionarCompromisso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-3yJCPPmAGwSss2Z7W7ghqRYBfZU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 04:42:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Compromisso inserido com sucesso!"
+						}
+					]
+				},
+				{
+					"name": "adicionarCompromisso  (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2021/08/10 08:00:00\",\r\n    \"obs\": \"Evento\",\r\n    \"participantes\": \"Nome1, Nome2, Nome3\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"status\": \"Em andamento\",\r\n    \"user_id\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/adicionarCompromisso",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"adicionarCompromisso"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adicionarCompromisso (exemplo de erro)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": \"2021/08/10 08:00:00\",\r\n    \"obs\": \"Evento\",\r\n    \"participantes\": \"Nome1, Nome2, Nome3\",\r\n    \"endereco\": \"Rua X, 06 - Centro - Cidade/UF\",\r\n    \"status\": \"Em andamento\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/adicionarCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"adicionarCompromisso"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"28-VQQyVtmDzB7ZVXCvgHawv0M0p+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:37:39 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe usuário com o ID informado!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "alterarCompromisso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"data\": \"2021/02/13 08:00:00\",\r\n    \"obs\": \"Evento alterado\",\r\n    \"participantes\": \"Participante 1, Participante 2\",\r\n    \"endereco\": \"Rua Alterada, 04 - ap 1 - Centro - Cidade/UF\",\r\n    \"status\": \"confirmado\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/alterarCompromisso",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alterarCompromisso"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alterarCompromisso",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"data\": \"2021/02/13 08:00:00\",\r\n    \"obs\": \"Evento alterado\",\r\n    \"participantes\": \"Participante 1, Participante 2\",\r\n    \"endereco\": \"Rua Alterada, 04 - ap 1 - Centro - Cidade/UF\",\r\n    \"status\": \"confirmado\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/alterarCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"alterarCompromisso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b-o699hlsBOmcmWpsUoqmvGRD18ME\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jun 2021 03:52:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Dados alterados com sucesso"
+						}
+					]
+				},
+				{
+					"name": "alterarCompromisso  (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"data\": \"2021/02/13 08:00:00\",\r\n    \"obs\": \"Evento alterado\",\r\n    \"participantes\": \"Participante 1, Participante 2\",\r\n    \"endereco\": \"Rua Alterada, 04 - ap 1 - Centro - Cidade/UF\",\r\n    \"status\": \"confirmado\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/alterarCompromisso",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alterarCompromisso"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alterarCompromisso (exemplo de erro)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"data\": \"2021/02/13 08:00:00\",\r\n    \"obs\": \"Evento alterado\",\r\n    \"participantes\": \"Participante 1, Participante 2\",\r\n    \"endereco\": \"Rua Alterada, 04 - ap 1 - Centro - Cidade/UF\",\r\n    \"status\": \"confirmado\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/alterarCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"alterarCompromisso"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2b-IhN0SNfMfGPiJASPMgYfhuBN2Qs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:47:24 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe compromisso com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "alterarContato",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nome\": \"Contato Alterado\",\r\n    \"email\": \"email_alterado@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua Alterada, 6 - cs 10 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/alterarContato",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alterarContato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alterarContato",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"nome\": \"Contato Alterado\",\r\n    \"email\": \"email_alterado@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua Alterada, 6 - cs 10 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/alterarContato",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"alterarContato"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-cfGGs07OkpiBLtM1ZxBHvwxCmlM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jun 2021 03:51:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Dados alterados com sucesso!"
+						}
+					]
+				},
+				{
+					"name": "alterarContato  (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nome\": \"Contato Alterado\",\r\n    \"email\": \"email_alterado@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua Alterada, 6 - cs 10 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/alterarContato",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alterarContato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alterarContato (exemplo de erro)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"nome\": null,\r\n    \"email\": \"email_alterado@email.com\",\r\n    \"telefone\": \"11 1111-1111\",\r\n    \"endereco\": \"Rua Alterada, 6 - cs 10 - Centro - Cidade/UF\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/alterarContato",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"alterarContato"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"4f-eQjWpBQUT0l1ycV8IWGi1eHEkxA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:48:48 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"value\": \"\",\n        \"msg\": \"O nome é obrigatório!\",\n        \"param\": \"nome\",\n        \"location\": \"body\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "excluirContato",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/excluirContato",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"excluirContato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "excluirContato",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/excluirContato",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"excluirContato"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-xyTN4ucTFQJUZ5OaxESHChJ5w4E\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 23:53:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Contato excluído com sucesso!"
+						}
+					]
+				},
+				{
+					"name": "excluirContato  (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/excluirContato",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"excluirContato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "excluirContato (exemplo de erro)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/excluirContato",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"excluirContato"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"27-J+VvdaURUlruiU7AlveUwq00i7M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:51:49 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe contato com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "excluirCompromisso/4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/excluirCompromisso",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"excluirCompromisso"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "excluirCompromisso/4",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/excluirCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"excluirCompromisso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-5bwkinnwukzgvdyPB16KkTm1W9M\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jun 2021 23:20:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Compromisso excluído com sucesso!"
+						},
+						{
+							"name": "excluirCompromisso/4 (exemplo de erro)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/excluirCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"excluirCompromisso"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2b-IhN0SNfMfGPiJASPMgYfhuBN2Qs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:52:32 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe compromisso com o ID informado!"
+						}
+					]
+				},
+				{
+					"name": "excluirCompromisso/4  (exemplo de erro)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/excluirCompromisso",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"excluirCompromisso"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "excluirCompromisso/4 (exemplo de erro)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/excluirCompromisso",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"excluirCompromisso"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2b-IhN0SNfMfGPiJASPMgYfhuBN2Qs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jul 2021 21:52:32 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Não existe compromisso com o ID informado!"
+						}
+					]
+				}
+			]
+		}
+	]
+}
